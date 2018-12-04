@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "918504330667",
+    "firebase_url": "https://ingreso-de-vehiculos.firebaseio.com",
+    "project_id": "ingreso-de-vehiculos",
+    "storage_bucket": "ingreso-de-vehiculos.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:918504330667:android:d235fd6fb52be4b8",
+        "android_client_info": {
+          "package_name": "com.example.guillermorios.ingresoautos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "918504330667-1g6su24nddts2i2gadov3ul28g5aq3f2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.guillermorios.ingresoautos",
+            "certificate_hash": "5c32386900d59d48e99db5c925026d193b5d26f9"
+          }
+        },
+        {
+          "client_id": "918504330667-nc8rohth9igai2j5a0sf6bjoma3pfsbn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJhL1TxA1vBZNS63q3tzoNUDAzX9bHSNg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "918504330667-nc8rohth9igai2j5a0sf6bjoma3pfsbn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
