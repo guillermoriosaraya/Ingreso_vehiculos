@@ -12,23 +12,28 @@
     android:padding="10px"
     tools:context=".Inicio">
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="204dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
         <ImageView
             android:id="@+id/idexit"
-            android:layout_width="100dp"
+            android:layout_width="118dp"
             android:layout_height="51dp"
             android:src="@drawable/car"
             app:srcCompat="@mipmap/ic_launcher" />
+
+        <TextView
+            android:layout_width="181dp"
+            android:layout_height="31dp"
+            android:layout_weight="1" />
 
     </LinearLayout>
 
@@ -42,7 +47,7 @@
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
-            android:layout_height="100dp"
+            android:layout_height="81dp"
             android:layout_weight="1"
             android:gravity="center"
             android:text="INGRESO DE VEHICULO"
