@@ -109,7 +109,8 @@
         android:layout_margin="10dp"
         android:text="Lista de Patentes"
         android:textSize="24sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        tools:textColor="@android:color/background_dark" />
     <ListView
         android:id="@+id/lv_datosPersonas"
         android:layout_width="match_parent"
