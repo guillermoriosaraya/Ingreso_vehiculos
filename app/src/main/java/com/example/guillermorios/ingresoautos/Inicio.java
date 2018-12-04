@@ -3,6 +3,7 @@ package com.example.guillermorios.ingresoautos;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.text.TextUtils;
@@ -17,81 +18,27 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 
-public class Inicio extends Activity implements View.OnClickListener{
+public class Inicio extends Activity {
 
-    //defining view objects
-    private EditText TextEmail;
-    private EditText TextPassword;
-    private Button btnRegistrar;
-    private ProgressDialog progressDialog;
-
-
-    //Declaramos un objeto firebaseAuth
-    private FirebaseAuth firebaseAuth;
+    Button ingresar;
+    EditText contraseña, correo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        super.onCreate (savedInstanceState);
+        setContentView(R.layout.activity_inicio);
 
-        //inicializamos el objeto firebaseAuth
-        firebaseAuth = FirebaseAuth.getInstance();
-
-        //Referenciamos los views
-        TextEmail = (EditText) findViewById(R.id.TxtEmail);
-        TextPassword = (EditText) findViewById(R.id.TxtPassword);
-
-        btnRegistrar = (Button) findViewById(R.id.botonRegistrar);
-
-        progressDialog = new ProgressDialog(this);
-
-        //attaching listener to button
-        btnRegistrar.setOnClickListener(this);
-    }
-
-    private void registrarUsuario(){
-
-        //Obtenemos el email y la contraseña desde las cajas de texto
-        String email = TextEmail.getText().toString().trim();
-        String password  = TextPassword.getText().toString().trim();
-
-        //Verificamos que las cajas de texto no esten vacías
-        if(TextUtils.isEmpty(email)){
-            Toast.makeText(this,"Se debe ingresar un email",Toast.LENGTH_LONG).show();
-            return;
-        }
-
-        if(TextUtils.isEmpty(password)){
-            Toast.makeText(this,"Falta ingresar la contraseña",Toast.LENGTH_LONG).show();
-            return;
-        }
-
-
-        progressDialog.setMessage("Realizando registro en linea...");
-        progressDialog.show();
-
-        //creating a new user
-        firebaseAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        //checking if success
-                        if(task.isSuccessful()){
-
-                            Toast.makeText(Inicio.this,"Se ha registrado el usuario con el email: "+ TextEmail.getText(),Toast.LENGTH_LONG).show();
-                        }else{
-
-                            Toast.makeText(Inicio.this,"No se pudo registrar el usuario ",Toast.LENGTH_LONG).show();
-                        }
-                        progressDialog.dismiss();
-                    }
-                });
+        ingresar = (Button)findViewById(R.id.btningreso);
+        contraseña = (EditText) findViewById(R.id.idcontraseña);
+        correo = (EditText) findViewById(R.id.idcorreo);
 
     }
 
-    @Override
-    public void onClick(View view) {
-        //Invocamos al método:
-        registrarUsuario();
+    public void ingresa1(View view) {
+
+        Intent i=new Intent(Inicio.this, MainActivity.class);
+        startActivity(i);
     }
+
+
 }

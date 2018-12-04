@@ -52,40 +52,39 @@
 
 
         <EditText
-            android:id="@+id/TxtEmail"
+            android:id="@+id/idcontraseña"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
             android:gravity="center"
-            android:inputType="textPersonName"
             android:hint="Email"
+            android:inputType="textPersonName"
             android:textSize="18sp" />
 
 
         <EditText
-            android:id="@+id/TxtPassword"
+            android:id="@+id/idcorreo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
             android:gravity="center"
-            android:inputType="textPersonName"
             android:hint="Contraseña"
+            android:inputType="textPassword"
             android:textSize="18sp" />
 
-        <Button
-            android:id="@+id/botonRegistrar"
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Registrar" />
+            android:layout_height="37dp"
+            android:layout_weight="1" />
 
         <Button
-            android:id="@+id/ingresa"
+            android:id="@+id/btningreso"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="ingresa1"
             android:text="Ingresa" />
 
     </LinearLayout>
